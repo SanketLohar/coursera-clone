@@ -1,4 +1,4 @@
-import { BarChart2, Building2, TrendingUp } from "lucide-react";
+
 
 export interface Course {
   id: string;
@@ -26,7 +26,7 @@ export interface Course {
     hours: number;
     projects: number;
     quizzes: number;
-    videoId:string;
+    videoId: string;
   }[];
   testimonials: {
     image: string;
@@ -39,7 +39,7 @@ export interface Course {
   careerOutcomes: {
     title: string;
     value: string;
-    icon?: React.ComponentType<{ className?: string }>;
+    icon?: string;
   }[];
 }
 export const courses: Course[] = [
@@ -80,7 +80,7 @@ export const courses: Course[] = [
         hours: 20,
         projects: 2,
         quizzes: 3,
-        videoId:"NQJvZnBzD6U?si=xG0fTYvXtNUv3ZBJ"
+        videoId: "NQJvZnBzD6U?si=xG0fTYvXtNUv3ZBJ"
       },
       {
         title: "Responsive Web Design",
@@ -90,7 +90,7 @@ export const courses: Course[] = [
         hours: 15,
         projects: 1,
         quizzes: 2,
-        videoId:"468OiiWxzjQ?si=tCMOFHgIZ2LrZ-3S"
+        videoId: "468OiiWxzjQ?si=tCMOFHgIZ2LrZ-3S"
       },
       {
         title: "JavaScript DOM Manipulation",
@@ -100,7 +100,7 @@ export const courses: Course[] = [
         hours: 10,
         projects: 2,
         quizzes: 3,
-        videoId:"jyOH3L_RG2Q?si=RhnUu6yiwWdXdVEP"
+        videoId: "jyOH3L_RG2Q?si=RhnUu6yiwWdXdVEP"
       },
     ],
     testimonials: [
@@ -172,7 +172,7 @@ export const courses: Course[] = [
         hours: 24,
         projects: 4,
         quizzes: 5,
-        videoId:"https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
+        videoId: "https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
       },
       {
         title: "Database Management and MongoDB",
@@ -182,7 +182,7 @@ export const courses: Course[] = [
         hours: 22,
         projects: 3,
         quizzes: 4,
-        videoId:"https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
+        videoId: "https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
       },
       {
         title: "Authentication and Security",
@@ -192,7 +192,7 @@ export const courses: Course[] = [
         hours: 20,
         projects: 3,
         quizzes: 4,
-        videoId:"https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
+        videoId: "https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
       },
     ],
     testimonials: [
@@ -209,12 +209,12 @@ export const courses: Course[] = [
       {
         title: "Average Salary",
         value: "$90,000/year",
-        icon: BarChart2,
+        icon: "BarChart2",
       },
       {
         title: "Job Growth",
         value: "+30% (2020-2030)",
-        icon: TrendingUp,
+        icon: "TrendingUp",
       },
     ],
   },
@@ -255,7 +255,7 @@ export const courses: Course[] = [
         hours: 40,
         projects: 5,
         quizzes: 6,
-        videoId:"https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
+        videoId: "https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
       },
       {
         title: "Building RESTful APIs",
@@ -265,7 +265,7 @@ export const courses: Course[] = [
         hours: 30,
         projects: 4,
         quizzes: 5,
-        videoId:"https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
+        videoId: "https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
       },
       {
         title: "DevOps and Cloud Deployment",
@@ -275,7 +275,7 @@ export const courses: Course[] = [
         hours: 35,
         projects: 4,
         quizzes: 6,
-        videoId:"https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
+        videoId: "https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
       },
     ],
     testimonials: [
@@ -292,12 +292,12 @@ export const courses: Course[] = [
       {
         title: "Average Salary",
         value: "$100,000/year",
-        icon: BarChart2,
+        icon: "BarChart2",
       },
       {
         title: "Job Growth",
         value: "+35% (2020-2030)",
-        icon: Building2,
+        icon: "Building2",
       },
     ],
   },
@@ -337,7 +337,7 @@ export const courses: Course[] = [
         hours: 20,
         projects: 3,
         quizzes: 4,
-        videoId:"https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
+        videoId: "https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
       },
       {
         title: "Agile and Scrum Methodology",
@@ -347,7 +347,7 @@ export const courses: Course[] = [
         hours: 18,
         projects: 2,
         quizzes: 3,
-        videoId:"https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
+        videoId: "https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
       },
       {
         title: "Risk and Stakeholder Management",
@@ -357,7 +357,7 @@ export const courses: Course[] = [
         hours: 22,
         projects: 3,
         quizzes: 4,
-        videoId:"https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
+        videoId: "https://youtu.be/NQJvZnBzD6U?si=Sq4RmiTnuzqBAezu"
       },
     ],
     testimonials: [
@@ -375,12 +375,12 @@ export const courses: Course[] = [
       {
         title: "Average Salary",
         value: "$95,000/year",
-        icon: BarChart2,
+        icon: "BarChart2",
       },
       {
         title: "Job Growth",
         value: "+20% (2020-2030)",
-        icon: Building2,
+        icon: "Building2",
       },
     ],
   },

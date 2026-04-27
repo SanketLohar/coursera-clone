@@ -5,8 +5,10 @@ import {
   Pencil,
   Plus,
   Share2,
+  Flame,
 } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Badge from "@/Components/Badge";
 
 const index = () => {
   const [user] = useState({
@@ -28,6 +30,21 @@ const index = () => {
       "AWS",
     ],
   });
+
+  const [streak, setStreak] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const loadStreak = () => {
+      let raw = localStorage.getItem("courseraClone_userStreak");
+      let val = parseInt(raw || "0", 10);
+      setStreak(isNaN(val) ? 0 : val);
+      setMounted(true);
+    };
+    loadStreak();
+    window.addEventListener("streakUpdated", loadStreak);
+    return () => window.removeEventListener("streakUpdated", loadStreak);
+  }, []);
 
   const workExperience = [
     {
@@ -108,6 +125,20 @@ const index = () => {
               <GraduationCap className="h-5 w-5 text-gray-400" />
               <span>{user.education}</span>
             </div>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-lg shadow-sm p-6">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-xl font-semibold flex items-center">
+              <Flame className="h-6 w-6 text-orange-500 mr-2" />
+              Learning Streak: {mounted ? `${streak} ${streak === 1 ? 'Day' : 'Days'}` : '...'}
+            </h2>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <Badge days={3} unlocked={mounted && streak >= 3} />
+            <Badge days={7} unlocked={mounted && streak >= 7} />
+            <Badge days={30} unlocked={mounted && streak >= 30} />
           </div>
         </div>
 

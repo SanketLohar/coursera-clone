@@ -1,5 +1,6 @@
 import { BookOpen, ChevronDown, Globe, Search } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 
 const Navbar = () => {
@@ -13,6 +14,15 @@ const Navbar = () => {
   const [isexploremenuopen, setisexploremenuopen] = useState(false);
   const [isdegreemenuopen, setisdegreemenuopen] = useState(false);
   const [isusermenuopen, setisusermenuopen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
+
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim() !== "") {
+      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+    }
+  };
   const topNav = [
     "For Individuals",
     "For Businesses",
@@ -89,7 +99,7 @@ const Navbar = () => {
     <>
       <div className="bg-[#1F2937] text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center py-2">
+          <div className="hidden md:flex justify-between items-center py-2">
             <div className="flex items-center space-x-4">
               <Globe className="h-4 w-4 text-gray-400" />
               <span className="text-sm text-gray-300">English</span>
@@ -112,14 +122,14 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-6">
-              <div className="flex items-center text-[#0056D2] cursor-pointer">
+              <Link href="/" className="flex items-center text-[#0056D2] cursor-pointer">
                 <BookOpen className="h-8 w-8" />
                 <span className="ml-2 font-bold text-xl tracking-tight">
                   Course
                 </span>
-              </div>
+              </Link>
 
-              <div className="relative">
+              <div className="relative hidden lg:block">
                 <button
                   className="text-[#0056D2] font-semibold flex items-center hover:opacity-80 transition-opacity"
                   onClick={() => {
@@ -129,9 +139,8 @@ const Navbar = () => {
                 >
                   Explore
                   <ChevronDown
-                    className={`h-4 w-4 ml-1 transition-transform duration-200 ${
-                      isexploremenuopen ? "rotate-180" : ""
-                    }`}
+                    className={`h-4 w-4 ml-1 transition-transform duration-200 ${isexploremenuopen ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
                 {isexploremenuopen && (
@@ -143,14 +152,14 @@ const Navbar = () => {
                         </h3>
                         <div className="space-y-4">
                           {section.items.map((item, itemIndex) => (
-                            <a key={itemIndex} href="#" className="block group">
+                            <Link key={itemIndex} href="/search" className="block group">
                               <div className="text-gray-900 font-medium group-hover:text-[#0056D2]">
                                 {item.title}
                               </div>
                               <div className="text-sm text-gray-500">
                                 {item.description}
                               </div>
-                            </a>
+                            </Link>
                           ))}
                         </div>
                       </div>
@@ -159,27 +168,27 @@ const Navbar = () => {
                 )}
               </div>
 
-              <div className="relative">
+              <form onSubmit={handleSearchSubmit} className="relative hidden md:block">
                 <input
                   type="text"
                   placeholder="What do you want to learn?"
-                  className={`w-[400px] pl-10 pr-4 py-2 border rounded-sm transition-all duration-200 ${
-                    issearchfocused
-                      ? "border-[#0056D2] shadow-sm"
-                      : "border-gray-300"
-                  }`}
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className={`w-[200px] lg:w-[400px] pl-10 pr-4 py-2 border rounded-sm transition-all duration-200 ${issearchfocused
+                    ? "border-[#0056D2] shadow-sm"
+                    : "border-gray-300"
+                    }`}
                   onFocus={() => setissearchfocused(true)}
                   onBlur={() => setissearchfocused(false)}
                 />
                 <Search
-                  className={`absolute left-3 top-2.5 h-5 w-5 transition-colors duration-200 ${
-                    issearchfocused ? "text-[#0056D2]" : "text-gray-400"
-                  }`}
+                  className={`absolute left-3 top-2.5 h-5 w-5 transition-colors duration-200 ${issearchfocused ? "text-[#0056D2]" : "text-gray-400"
+                    }`}
                 />
-              </div>
+              </form>
             </div>
             <div className="flex items-center space-x-6">
-              <div className="relative">
+              <div className="relative hidden md:block">
                 <button
                   className="text-[#0056D2] font-semibold hover:opacity-80 transition-opacity flex items-center"
                   onClick={() => {
@@ -189,17 +198,16 @@ const Navbar = () => {
                 >
                   Online Degree
                   <ChevronDown
-                    className={`h-4 w-4 ml-1 transition-transform duration-200 ${
-                      isdegreemenuopen ? "rotate-180" : ""
-                    }`}
+                    className={`h-4 w-4 ml-1 transition-transform duration-200 ${isdegreemenuopen ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
                 {isdegreemenuopen && (
                   <div className="absolute top-full right-0 w-[300px] bg-white shadow-lg rounded-md mt-2 p-4">
                     {degreesMenuItems.map((item, index) => (
-                      <a
+                      <Link
                         key={index}
-                        href="#"
+                        href="/search"
                         className="flex justify-between items-center p-3 hover:bg-gray-50 rounded-md group"
                       >
                         <span className="text-gray-900 group-hover:text-[#0056D2]">
@@ -208,7 +216,7 @@ const Navbar = () => {
                         <span className="text-sm text-gray-500">
                           {item.count}
                         </span>
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}
@@ -226,9 +234,8 @@ const Navbar = () => {
                       className="w-8 h-8 rounded-full"
                     />
                     <ChevronDown
-                      className={`h-4 w-4 transition-transform duration-200 ${
-                        isusermenuopen ? "rotate-180" : ""
-                      }`}
+                      className={`h-4 w-4 transition-transform duration-200 ${isusermenuopen ? "rotate-180" : ""
+                        }`}
                     />
                   </button>
 
@@ -276,14 +283,14 @@ const Navbar = () => {
                 <>
                   <button
                     onClick={handlegooglesignin}
-                    className="px-4 py-2 bg-white border border-gray-300 rounded-sm text-gray-700 font-semibold hover:bg-gray-50 transition-colors flex items-center space-x-2"
+                    className="hidden sm:flex px-4 py-2 bg-white border border-gray-300 rounded-sm text-gray-700 font-semibold hover:bg-gray-50 transition-colors items-center space-x-2"
                   >
                     <img
                       src="https://www.google.com/favicon.ico"
                       alt="google"
                       className="w-4 h-4"
                     />
-                    <span>Sign in with Google</span>
+                    <span>Sign in</span>
                   </button>
                   <button className="px-4 py-2 bg-[#0056D2] text-white font-semibold rounded-sm hover:bg-blue-700 transition-colors">
                     Join for Free

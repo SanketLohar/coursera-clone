@@ -39,3 +39,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Development & Audit Artifacts
+IMPLEMENTATION_PLAN.md
+TASK.md
+WALKTHROUGH.md
+CERTIFICATION_REPORT.md
+edge_case_audit_plan.md
+strict_audit*.js
+test-*.mjs
+test-*.js
+*_results.txt
+*.png
+*.log
+dom.html
+.gemini/
