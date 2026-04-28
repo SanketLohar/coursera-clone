@@ -1,40 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+Coursera Clone – Full Stack Learning Platform
 
-## Getting Started
+A production-ready Coursera-inspired learning platform built with modern web technologies, featuring real-time interactivity, offline capabilities, and advanced user engagement systems.
 
-First, run the development server:
+Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+https://coursera-clone-igug.vercel.app
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Project Overview
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+This project replicates a modern online learning experience with a strong focus on:
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Real-time UI interactions
+Offline-first capabilities
+User engagement systems
+Persistent state management
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+The platform is designed with production-level engineering practices, ensuring reliability, scalability, and smooth UX.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Features
+1. Real-Time Search & Tag Filtering
+Instant filtering by title, description, and tags
+Tag-based categorization (Programming, Design, etc.)
+No page reloads (client-side filtering)
+2. Course Completion Confetti
+Interactive confetti animation (3–5 seconds)
 
-## Learn More
+Motivational message:
 
-To learn more about Next.js, take a look at the following resources:
+“Great Job! You’ve completed this course!”
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+Enhances user engagement
+3. Offline Mode (PWA)
+Download courses (text + images)
+Works without internet connection
+Service Worker-based caching
+“Available Offline” indicator for downloaded courses
+4. Streak Tracking System
+Tracks daily learning activity
+Streak increment & reset logic
+Badge rewards (3, 7, 30 days)
+Timezone-safe implementation (UTC-based)
+5. Reminder Notification System
+Set reminders (1 hour / tomorrow)
+Persistent reminders (survive refresh)
+Browser notifications support
+Graceful handling of permission denial
+6. Auto-Resume Video Playback
+Saves video progress automatically
+Resume from last watched timestamp
+“Resume Watching” overlay for quick access
+Tech Stack
+Frontend
+Next.js
+React.js
+Tailwind CSS
+State & Storage
+LocalStorage
+IndexedDB (via Service Worker caching)
+PWA & Offline
+Service Worker
+Cache API
+UX Enhancements
+canvas-confetti
+Toast notifications
+Testing & Validation
+Puppeteer (browser automation)
+Zero-bluff audit strategy (real interaction testing)
+Testing & Verification
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project was rigorously tested using a Zero-Bluff Certification Approach:
 
-## Deploy on Vercel
+Real browser interaction (no assumptions)
+2x refresh persistence validation
+Offline simulation testing
+Edge-case handling (corrupted data, permissions)
+Production deployment audit (Vercel)
+Performance & Reliability
+Optimized images using Next.js
+Stable UI across refresh cycles
+No critical runtime errors
+Offline fallback UI implemented
+Resilient state handling (no crashes on corrupted data)
+Project Structure (Simplified)
+src/
+ ├── Components/
+ ├── pages/
+ │   ├── course/[id]
+ │   ├── search
+ │   ├── profile
+ ├── styles/
+public/
+ ├── sw.js
+Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deployed on Vercel with production optimizations.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+npm run build
+npm start
+Key Engineering Highlights
+Fixed Tailwind production purge issue (case sensitivity)
+Implemented Service Worker asset prefetching
+Built persistent reminder system
+Designed timezone-safe streak logic
+Ensured offline-first UX architecture
+Future Improvements
+Backend integration (authentication + database)
+Video streaming optimization
+Push notifications (server-based)
+Course progress analytics
+Conclusion
+
+This project demonstrates end-to-end frontend engineering skills, combining:
+
+Real-world UX design
+State persistence
+Offline-first architecture
+Production debugging & optimization
+Author
+
+Sanket Lohar
+Full Stack Developer
