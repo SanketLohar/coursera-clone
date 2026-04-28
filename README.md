@@ -18,37 +18,46 @@ Persistent state management
 The platform is designed with production-level engineering practices, ensuring reliability, scalability, and smooth UX.
 
 Features
-1. Real-Time Search & Tag Filtering
-Instant filtering by title, description, and tags
-Tag-based categorization (Programming, Design, etc.)
-No page reloads (client-side filtering)
-2. Course Completion Confetti
-Interactive confetti animation (3–5 seconds)
+Real-time Search and Filtering: Instantly filter courses based on title, description, and tags without page reload.
+Tag-based Categorization: Easily browse courses using categories such as Programming, Design, and Marketing.
+Course Completion Confetti: Visual feedback with animation and motivational message upon completing a course.
+Offline Mode Support: Download course content (text and images) and access it without an internet connection.
+Offline Indicator: Clearly marks courses that are available offline.
+Streak Tracking System: Tracks daily learning activity with automatic increment and reset logic.
+Reward Badges: Displays milestones such as 3-day, 7-day, and 30-day streak achievements.
+Reminder Notification System: Allows users to set reminders with persistent storage and browser notification support.
+Auto-Resume Video Playback: Saves video progress and allows users to resume from the last watched timestamp.
+Resilient State Management: Handles corrupted local data gracefully without crashing.
 
 Motivational message:
 
 “Great Job! You’ve completed this course!”
 
 Enhances user engagement
+
 3. Offline Mode (PWA)
 Download courses (text + images)
 Works without internet connection
 Service Worker-based caching
 “Available Offline” indicator for downloaded courses
+
 4. Streak Tracking System
 Tracks daily learning activity
 Streak increment & reset logic
 Badge rewards (3, 7, 30 days)
 Timezone-safe implementation (UTC-based)
+
 5. Reminder Notification System
 Set reminders (1 hour / tomorrow)
 Persistent reminders (survive refresh)
 Browser notifications support
 Graceful handling of permission denial
+
 6. Auto-Resume Video Playback
 Saves video progress automatically
 Resume from last watched timestamp
 “Resume Watching” overlay for quick access
+
 Tech Stack
 Frontend
 Next.js
@@ -81,16 +90,7 @@ Stable UI across refresh cycles
 No critical runtime errors
 Offline fallback UI implemented
 Resilient state handling (no crashes on corrupted data)
-Project Structure (Simplified)
-src/
- ├── Components/
- ├── pages/
- │   ├── course/[id]
- │   ├── search
- │   ├── profile
- ├── styles/
-public/
- ├── sw.js
+
 Deployment
 
 Deployed on Vercel with production optimizations.
