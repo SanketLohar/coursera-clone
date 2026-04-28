@@ -1,0 +1,17 @@
+[
+  {
+    "type": "log",
+    "text": "ServiceWorker registration successful with scope:  https://coursera-clone-igug.vercel.app/",
+    "location": "https://coursera-clone-igug.vercel.app/profile"
+  },
+  {
+    "type": "warn",
+    "text": "Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://www.youtube.com') does not match the recipient window's origin ('https://coursera-clone-igug.vercel.app').",
+    "location": "https://coursera-clone-igug.vercel.app/course/microsoft-front-end"
+  },
+  {
+    "type": "warn",
+    "text": "Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://www.youtube.com') does not match the recipient window's origin ('https://coursera-clone-igug.vercel.app').",
+    "location": "https://coursera-clone-igug.vercel.app/course/microsoft-front-end"
+  }
+]

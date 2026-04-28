@@ -1,0 +1,7 @@
+[navbar_consistency]: zero_bluff_navbar_consistency_1777358129265.png
+[search_tag_react_dev]: zero_bluff_search_tag_react_dev_1777358133825.png
+[streak_tracking_6days]: zero_bluff_streak_tracking_6days_1777358137494.png
+[course_completion_confetti]: zero_bluff_course_completion_confetti_1777358141691.png
+[video_resume_overlay]: zero_bluff_video_resume_overlay_1777358147032.png
+[reminder_toast_visible]: zero_bluff_reminder_toast_visible_1777358153805.png
+[offline_resilience]: zero_bluff_offline_resilience_1777358155117.png

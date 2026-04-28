@@ -1,0 +1,9 @@
+{
+  "navbar": true,
+  "search": true,
+  "streak": true,
+  "completion": true,
+  "videoResume": true,
+  "reminder": true,
+  "offline": true
+}
