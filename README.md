@@ -16,13 +16,6 @@
 
 ---
 
-## Screenshot
-
-*Visual evidence of the platform's core features and UI consistency.*
-
-<img width="1900" height="813" alt="Homepage" src="audit_01_homepage_navbar.png" />
-<img width="1891" height="902" alt="Search & Filtering" src="audit_03_search_tag_development.png" />
-<img width="1892" height="897" alt="Streak Tracking" src="audit_04_streak_after_inject.png" />
 
 ---
 
