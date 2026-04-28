@@ -27,12 +27,12 @@ Traditional online learning platforms often struggle with user engagement and re
 
 ## Features
 
-* **🔍 Advanced Search & Tag Filtering:** Effortlessly discover courses with real-time search and category-based tag filters.
-* **🔥 Learning Streak Tracking:** Gamified daily streaks to keep you motivated and consistent in your learning journey.
-* **🎥 Intelligent Video Player:** Remembers your progress and offers "Resume Watching" functionality across sessions.
-* **📴 Offline Resilience:** Built to handle intermittent connections, allowing for a seamless navigation experience even when offline.
-* **🎓 Course Completion & Confetti:** Celebratory UI feedback and certificate generation upon finishing your learning paths.
-* **🔔 Smart Reminders:** Integrated notification system to prompt you for upcoming study sessions.
+* **Advanced Search & Tag Filtering:** Effortlessly discover courses with real-time search and category-based tag filters.
+* **Learning Streak Tracking:** Gamified daily streaks to keep you motivated and consistent in your learning journey.
+* **Intelligent Video Player:** Remembers your progress and offers "Resume Watching" functionality across sessions.
+* **Offline Resilience:** Built to handle intermittent connections, allowing for a seamless navigation experience even when offline.
+* **Course Completion & Confetti:** Celebratory UI feedback and certificate generation upon finishing your learning paths.
+* **Smart Reminders:** Integrated notification system to prompt you for upcoming study sessions.
 
 ---
 
