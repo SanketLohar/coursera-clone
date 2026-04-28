@@ -1,122 +1,40 @@
-Coursera Clone – Full Stack Learning Platform
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-A production-ready Coursera-inspired learning platform built with modern web technologies, featuring real-time interactivity, offline capabilities, and advanced user engagement systems.
+## Getting Started
 
-Live Demo
+First, run the development server:
 
-https://coursera-clone-igug.vercel.app
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Project Overview
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project replicates a modern online learning experience with a strong focus on:
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-Real-time UI interactions
-Offline-first capabilities
-User engagement systems
-Persistent state management
+[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The platform is designed with production-level engineering practices, ensuring reliability, scalability, and smooth UX.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
 
-Features
-Real-time Search and Filtering: Instantly filter courses based on title, description, and tags without page reload.
-Tag-based Categorization: Easily browse courses using categories such as Programming, Design, and Marketing.
-Course Completion Confetti: Visual feedback with animation and motivational message upon completing a course.
-Offline Mode Support: Download course content (text and images) and access it without an internet connection.
-Offline Indicator: Clearly marks courses that are available offline.
-Streak Tracking System: Tracks daily learning activity with automatic increment and reset logic.
-Reward Badges: Displays milestones such as 3-day, 7-day, and 30-day streak achievements.
-Reminder Notification System: Allows users to set reminders with persistent storage and browser notification support.
-Auto-Resume Video Playback: Saves video progress and allows users to resume from the last watched timestamp.
-Resilient State Management: Handles corrupted local data gracefully without crashing.
+This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Motivational message:
+## Learn More
 
-“Great Job! You’ve completed this course!”
+To learn more about Next.js, take a look at the following resources:
 
-Enhances user engagement
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
 
-3. Offline Mode (PWA)
-Download courses (text + images)
-Works without internet connection
-Service Worker-based caching
-“Available Offline” indicator for downloaded courses
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-4. Streak Tracking System
-Tracks daily learning activity
-Streak increment & reset logic
-Badge rewards (3, 7, 30 days)
-Timezone-safe implementation (UTC-based)
+## Deploy on Vercel
 
-5. Reminder Notification System
-Set reminders (1 hour / tomorrow)
-Persistent reminders (survive refresh)
-Browser notifications support
-Graceful handling of permission denial
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-6. Auto-Resume Video Playback
-Saves video progress automatically
-Resume from last watched timestamp
-“Resume Watching” overlay for quick access
-
-Tech Stack
-Frontend
-Next.js
-React.js
-Tailwind CSS
-State & Storage
-LocalStorage
-IndexedDB (via Service Worker caching)
-PWA & Offline
-Service Worker
-Cache API
-UX Enhancements
-canvas-confetti
-Toast notifications
-Testing & Validation
-Puppeteer (browser automation)
-Zero-bluff audit strategy (real interaction testing)
-Testing & Verification
-
-This project was rigorously tested using a Zero-Bluff Certification Approach:
-
-Real browser interaction (no assumptions)
-2x refresh persistence validation
-Offline simulation testing
-Edge-case handling (corrupted data, permissions)
-Production deployment audit (Vercel)
-Performance & Reliability
-Optimized images using Next.js
-Stable UI across refresh cycles
-No critical runtime errors
-Offline fallback UI implemented
-Resilient state handling (no crashes on corrupted data)
-
-Deployment
-
-Deployed on Vercel with production optimizations.
-
-npm run build
-npm start
-Key Engineering Highlights
-Fixed Tailwind production purge issue (case sensitivity)
-Implemented Service Worker asset prefetching
-Built persistent reminder system
-Designed timezone-safe streak logic
-Ensured offline-first UX architecture
-Future Improvements
-Backend integration (authentication + database)
-Video streaming optimization
-Push notifications (server-based)
-Course progress analytics
-Conclusion
-
-This project demonstrates end-to-end frontend engineering skills, combining:
-
-Real-world UX design
-State persistence
-Offline-first architecture
-Production debugging & optimization
-Author
-
-Sanket Lohar
-Full Stack Developer
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.

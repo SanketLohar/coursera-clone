@@ -47,9 +47,14 @@ WALKTHROUGH.md
 CERTIFICATION_REPORT.md
 edge_case_audit_plan.md
 strict_audit*.js
+remote_audit*.js
+zero_bluff_audit*.js
 test-*.mjs
 test-*.js
 *_results.txt
+zero_bluff_*.txt
+zero_bluff_*.json
+audit_report.html
 *.png
 *.log
 dom.html
